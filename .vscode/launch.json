@@ -1,0 +1,70 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Next.js: Chrome",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}",
+			"sourceMapPathOverrides": {
+				"webpack://_N_E/*": "${workspaceFolder}/*"
+			}
+		},
+		{
+			"name": "Next.js: Firefox",
+			"type": "firefox",
+			"request": "launch",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}",
+			"pathMappings": [
+				{
+					"url": "webpack://_N_E",
+					"path": "${workspaceFolder}"
+				}
+			]
+		},
+		{
+			"name": "Next.js: Edge",
+			"type": "msedge",
+			"request": "launch",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}",
+			"sourceMapPathOverrides": {
+				"webpack://_N_E/*": "${workspaceFolder}/*"
+			}
+		},
+		{
+			"name": "Next.js: Full Stack (Chrome)",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run dev",
+			"serverReadyAction": {
+				"pattern": "- Local:.+(https?://.+)",
+				"action": "debugWithChrome"
+			}
+		},
+		{
+			"name": "Next.js: Full Stack (Firefox)",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run dev",
+			"serverReadyAction": {
+				"pattern": "- Local:.+(https?://.+)",
+				"action": "startDebugging",
+				"name": "Next.js: Firefox"
+			}
+		},
+		{
+			"name": "Next.js: Full Stack (Edge)",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npm run dev",
+			"serverReadyAction": {
+				"pattern": "- Local:.+(https?://.+)",
+				"action": "startDebugging",
+				"name": "Next.js: Edge"
+			}
+		}
+	]
+}

@@ -5,6 +5,9 @@ import { nextCookies } from "better-auth/next-js";
 import { genericOAuth } from "better-auth/plugins";
 
 export const auth = betterAuth({
+	advanced: {
+		useSecureCookies: true,
+	},
 	plugins: [
 		nextCookies(),
 		genericOAuth({
